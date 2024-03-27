@@ -35,7 +35,6 @@ jobs:
         script: |
           cd public_html
           cd app
-          composer update
           composer install
           php artisan key:generate
           php artisan config:clear
