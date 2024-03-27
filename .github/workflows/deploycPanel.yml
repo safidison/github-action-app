@@ -22,3 +22,18 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         server-dir: /public_html/app/
 
+    - name: SSH Connection add App configuration
+      if: ${{ success() }}
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USER }}
+        key: ${{ secrets.SSH_PRIVATE_KEY}}
+        port: ${{ secrets.SSH_PORT }}
+        passphrase: ${{ secrets.SSH_PASSPHRASE }}
+        script_stop: true
+        script: |
+          cd public_html
+          cd app
+          composer install
+
