@@ -37,5 +37,3 @@ jobs:
           cd app
           composer update
           composer install
-          php artisan serve
-
