@@ -1,8 +1,8 @@
 name: Publish Website to CPanel
 on:
   push:
-    branches:
-      - main
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+' # Accepte les tags au format vX.X.X où X est un nombre
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
