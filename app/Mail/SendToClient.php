@@ -27,7 +27,7 @@ class SendToClient extends Mailable
      */
     public function build(): static
     {
-        return $this->from('no-reply@econolia.fr')
+        return $this->from(env('MAIL_FROM_ADDRESS'))
             ->subject('Les leads - ' . env('APP_NAME'))
             ->markdown('emails.send_leads');
     }

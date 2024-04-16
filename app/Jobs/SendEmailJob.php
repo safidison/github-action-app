@@ -33,6 +33,6 @@ class SendEmailJob implements ShouldQueue
      */
     public function handle(): void
     {
-        Mail::to('safidison.econolia@gmail.com')->send(new SendToClient());
+        Mail::to(env("MAIL_LEAD"))->send(new SendToClient());
     }
 }
