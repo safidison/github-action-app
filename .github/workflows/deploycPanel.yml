@@ -41,4 +41,5 @@ jobs:
           cd public_html
           cd app
           composer install
+          php artisan key:generate
           php artisan migrate --force
