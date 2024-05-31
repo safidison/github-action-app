@@ -1,12 +1,4 @@
 name: Publish Website to CPanel
-on:
-  workflow_dispatch:  # Permet le déclenchement manuel du workflow
-#on:
-#  push:
-##    branches:
-##      - main
-#    tags:
-#      - 'v[0-9]+.[0-9]+.[0-9]+' #Format: vX.X.X
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
