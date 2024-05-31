@@ -1,4 +1,6 @@
 name: Publish Website to CPanel
+on:
+  workflow_dispatch:  # Permet le déclenchement manuel du workflow
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
